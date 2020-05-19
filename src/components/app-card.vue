@@ -1,13 +1,14 @@
 <template>
-    <div class="app-card" :style="{'background-color':cor,'width':largura}">
-        <slot> </slot>
+    <div class="" :style="{'background-color':cor,'width':largura}">
+        <slot></slot>
 
     </div>
+    
 </template>
 
 <script>
 export default {
-    name:'appCard',
+    name:'app-card',
     props: {
         cor: String,
         largura: {
@@ -21,8 +22,9 @@ export default {
 
 <style>
 .app-card{
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.25);
     padding: 10px;
     margin: 10px;
 }
+
 </style>

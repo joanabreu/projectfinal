@@ -1,11 +1,17 @@
 <template>
+<!-- Fotos da API -->
   <div class="breeds">
+      <div class="columns"></div>
     <div v-for="(item, index) in resultados" :key="index">
+<!-- Foto em Appcard -->
       <app-card largura="200px">
-            <router-link :to='"/breeds/"+item.name'>{{ item.name }}</router-link>
-            <button @click="navega(item.name)">{{ item.name }}</button>
+<!-- Routerlink -->
+            <router-link :to='"/breeds/"+item.name'></router-link>
+<!-- Botão Imagem -->
+            <button class="btn success" @click="navega(item.name)">{{ item.name }}</button>
             <br>
-            <img :src="item.photo" height="50" alt="">
+<!-- Fotos Propriedades -->
+            <img :src="item.photo" height="100" width="150" alt="">
         </app-card>
     </div>
   </div>
@@ -98,4 +104,24 @@ a {
   display: flex;
   flex-flow: row wrap;
 }
+.btn {
+    border-color: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 5px 13px;
+    font-size: 12px;
+    cursor: pointer;
+    
+}
+.success {
+    border-color: 2px #4CAF50;
+    color: green;
+}
+.sucess:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
 </style>

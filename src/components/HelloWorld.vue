@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <input type="text" v-model="pesquisa">
-    <button @click="carregaInfo(pesquisa)">Pesquisar</button>
+    <button class="btn success" @click="carregaInfo(pesquisa)">Pesquisar</button>
     <div v-for="(item, index) in resultados" :key="index">
       <h3>{{ item }}</h3>
       <img :src="item" alt="">
@@ -38,3 +38,10 @@ export default {
     }
   }
 }</script>
+
+<style>
+.hello {
+  padding: 100px;
+}
+
+</style>

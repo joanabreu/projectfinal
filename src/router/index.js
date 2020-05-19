@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Breed from '../views/breed.vue'
 import Breeds from '../views/breeds.vue'
-
+import Contact from '../views/Contact.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -11,6 +11,10 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Contact',
+    component: Contact
   },
   {
     path: '/breeds',
@@ -28,6 +32,7 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
+ 
 ]
 
 const router = new VueRouter({
