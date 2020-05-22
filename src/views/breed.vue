@@ -16,7 +16,7 @@
 <!-- Adição de Fotos Favoritas -->
         <div v-for="(favorite, index) in favoriteStore.favoritecounter" :key="index">
 <!-- Remover Fotos dos Favoritos -->
-          <img :src="favorite" height="300" width="300" alt="" v-on:click="removeelement(index)" :id=index>
+          <img :src="favorite" alt="" v-on:click="removeelement(index)" :id=index>
         </div>
       </div>
     </div>

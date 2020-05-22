@@ -3,7 +3,7 @@
   <div class="home">
     <img alt="logo" src="../assets/logo.png">
 <!-- Mensagem Apresentada -->
-    <HelloWorld msg="Bem-vindo ao Doggie! O melhor site de cães alguma vez conhecido! Pesquise as suas raças de cães favoritas!"/>
+    <HelloWorld msg="Bem-vindo ao Doggie! O melhor site de cães alguma vez conhecido! Pesquise as suas raças de cães favoritas"/>
   </div>
  
 </template>
