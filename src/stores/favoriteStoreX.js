@@ -7,7 +7,7 @@ Vue.use(Vuex);
 //Criação da Barra de Favoritos - Adicionando o elemento=foto e removendo dos favoritos
 const favoriteStoreX = new Vuex.Store({
     state: {
-        favoritecounter:['https://images.dog.ceo/breeds/bouvier/n02106382_1005.jpg']
+        favoritecounter:[]
     },
     plugins: [createPersistedState()],
     mutations: {
