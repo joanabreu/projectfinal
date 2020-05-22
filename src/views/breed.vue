@@ -14,7 +14,7 @@
         <br>
         <h2>Favoritos</h2>
 <!-- Adição de Fotos Favoritas -->
-        <div v-for="(favorite, index) in favoriteStore.favoritecounter" :key="index">
+        <div v-for="(favorite, index) in favoriteStoreX.state.favoritecounter" :key="index">
 <!-- Remover Fotos dos Favoritos -->
           <img :src="favorite" alt="" v-on:click="removeelement(index)" :id=index>
         </div>
@@ -26,8 +26,8 @@
 <script>
 //Importar elementos
 import axios from "axios"
-import counterStore from "../stores/counterStore"
 import favoriteStore from "../stores/favoriteStore"
+import favoriteStoreX from "../stores/favoriteStoreX"
 
 export default {
   name: 'HelloWorld',
@@ -39,8 +39,8 @@ export default {
     return {
       resultados: "",
       pesquisa: "",
-      counterStore: counterStore.data,
-      favoriteStore: favoriteStore.data
+      favoriteStore: favoriteStore.data,
+      favoriteStoreX
     }
   },
   //Métodos Utilizados 
@@ -49,15 +49,14 @@ export default {
       counterStore.methods.increment()
     },
     addelement(element){
-      if(!favoriteStore.data.favoritecounter.includes(element)){
-        favoriteStore.methods.addelement(element)
+      if(!favoriteStoreX.state.favoritecounter.includes(element)){
+        favoriteStoreX.commit('addelement', element)
       }
     
       console.log(favoriteStore.data.favoritecounter.includes(element))
     },
     removeelement(index){
-      favoriteStore.methods.removeelement(index)
-      console.log(favoriteStore.data.favoritecounter[0]+"")
+      favoriteStoreX.commit('removeelement', index)
     },
 //Imagens da API de cada Raça
     carregaInfo(query){
