@@ -1,20 +1,13 @@
 <template>
-<!-- Logo da Home -->
-  <div class="home">
-    <br>
-    <img alt="logo" src="../assets/logo.png">
-    <br>
+<div class="venda">
     <h3>Destaque para Venda</h3>
     <br>
-    <div v-for="(n, index) in 3" :key="index" class="destaque">
+    <div v-for="(n, index) in 6" :key="index" class="destaque">
       <div v-if="index < favoriteStoreX.state.favoritecounter.length">
         <img :src="favoriteStoreX.state.favoritecounter[index]" height="300" width="300" alt="">  
     </div>
   </div>
-<!-- Mensagem Apresentada -->
-    <HelloWorld msg="Bem-vindo ao Doggie! O melhor site de cães alguma vez conhecido! Pesquise as suas raças de cães favoritas"/>
   </div>
- 
 </template>
 
 <script>
@@ -35,10 +28,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.destaque {
-  display: inline-block;
-  margin: 0px
-}
-</style>
